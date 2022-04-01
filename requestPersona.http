@@ -1,0 +1,39 @@
+###
+POST http://localhost:5000/api/v1/people/person HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"Andrea",
+  "lastname":"Muñoz",
+  "dni":"1002592",
+  "address":{
+    "city":"Manizales",
+    "code_zip":1874,
+    "geo":[-7.87532,9.78674]
+  }
+}
+
+###
+GET http://localhost:5000/api/v1/people HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/people/62466f9bf4463146b7be8188 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/v1/people/62466f9bf4463146b7be8188 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"Andrea",
+  "lastname":"Rodriguez",
+  "dni":"1002592",
+  "address":{
+    "city":"Manizales",
+    "code_zip":1874,
+    "geo":[-7.87532,9.78674]
+
+  }
+}
+
+###
+DELETE http://localhost:5000/api/v1/people/62466f9bf4463146b7be8188 HTTP/1.1
